@@ -23,15 +23,15 @@ namespace WC3Launcher
         //[DllImport("kernel32.dll", EntryPoint = "LoadLibrary")]
         //public static extern int LoadLibrary( [MarshalAs(UnmanagedType.LPStr)] string lpLibFileName);
 
-        private string gameExePath; // путь к файлу игры
-        private bool clearCash; // очищать кеш при старте (bncash.dat)
-        private bool launchGameOnStart; // запускать игру при старте?
-        private bool useOpenGL; // использовать OpenGL?
-        private bool useWindowMode; // запускать игру в окне?
+        private string gameExePath; // path to the game
+        private bool clearCash; // clear cache on start(bncash.dat)
+        private bool launchGameOnStart; // run game when laucher starts?
+        private bool useOpenGL; // use OpenGL?
+        private bool useWindowMode; // run game in window mode?
         
-        private string bannerURL = "http://harpywar.com/wc3launcher/banner.php";
+        private string bannerURL = "http://pvpgn.harpywar.com/wc3launcher/banner.php"; // remote file format: "image,url"
         private bool loadBanner = true; // you can change it to enable or disable advertise text
-        private string newsURL = "http://ya.ru";
+        private string newsURL = "http://yandex.com";
 
 
         public frmMain()
@@ -40,9 +40,6 @@ namespace WC3Launcher
         }
 
 
-        // TODO: баннер, подгружающийся асинхронно с моего сайта
-        //      banner.php, с содержимым "image,url"
-        // TODO: иконка для формы
         private void Form1_Load(object sender, EventArgs e)
         {
             wbNews.Url = new Uri(newsURL);
@@ -98,19 +95,17 @@ namespace WC3Launcher
 
             try
             {
-                string filename = txtGameExePath.Text; // полный путь запускаемого файла
-                string directory = Directory.GetParent(filename).FullName; // путь к директории запускаемого файла
+                string filename = txtGameExePath.Text; // full path to the game exe
+                string directory = Directory.GetParent(filename).FullName; // path to the directory of the file to be runned
                
                 if (chkClearCash.Checked)
-                {
-                    // удалить кеш файл
                     File.Delete(directory + @"\bncache.dat");
-                }
+
                 Process game = new Process();
                 game.StartInfo.FileName = filename;
                 game.StartInfo.WorkingDirectory = directory;
 
-                // аргументы для запуска
+                // arguments for the game start
                 if (useWindowMode)
                     game.StartInfo.Arguments += "-window ";
                 if (useOpenGL)
@@ -204,7 +199,7 @@ namespace WC3Launcher
 
         private void LoadBanner()
         {
-            // динамическая подгрузка баннера, асинхронно
+            // async loading
             readRemoteFile(bannerURL);
         }
 

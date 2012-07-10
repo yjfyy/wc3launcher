@@ -60,9 +60,9 @@
             this.chkClearCash.AutoSize = true;
             this.chkClearCash.Location = new System.Drawing.Point(12, 376);
             this.chkClearCash.Name = "chkClearCash";
-            this.chkClearCash.Size = new System.Drawing.Size(163, 17);
+            this.chkClearCash.Size = new System.Drawing.Size(152, 17);
             this.chkClearCash.TabIndex = 4;
-            this.chkClearCash.Text = "Очищать кеш (bncache.dat)";
+            this.chkClearCash.Text = "Clear cache (bncache.dat)";
             this.chkClearCash.UseVisualStyleBackColor = true;
             this.chkClearCash.CheckedChanged += new System.EventHandler(this.chkClearCash_CheckedChanged);
             // 
@@ -73,8 +73,8 @@
             this.txtGameExePath.ReadOnly = true;
             this.txtGameExePath.Size = new System.Drawing.Size(287, 20);
             this.txtGameExePath.TabIndex = 5;
-            this.txtGameExePath.TextChanged += new System.EventHandler(this.txtGameExePath_TextChanged);
             this.txtGameExePath.Click += new System.EventHandler(this.txtGameExePath_Click);
+            this.txtGameExePath.TextChanged += new System.EventHandler(this.txtGameExePath_TextChanged);
             // 
             // openFileDialog
             // 
@@ -98,7 +98,7 @@
             this.groupBox1.Size = new System.Drawing.Size(469, 263);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Новости сервера";
+            this.groupBox1.Text = "Server news";
             // 
             // wbNews
             // 
@@ -113,9 +113,9 @@
             this.chkLaunchGameOnStart.AutoSize = true;
             this.chkLaunchGameOnStart.Location = new System.Drawing.Point(12, 353);
             this.chkLaunchGameOnStart.Name = "chkLaunchGameOnStart";
-            this.chkLaunchGameOnStart.Size = new System.Drawing.Size(162, 17);
+            this.chkLaunchGameOnStart.Size = new System.Drawing.Size(113, 17);
             this.chkLaunchGameOnStart.TabIndex = 9;
-            this.chkLaunchGameOnStart.Text = "Запускать игру при старте";
+            this.chkLaunchGameOnStart.Text = "Run game on start";
             this.chkLaunchGameOnStart.UseVisualStyleBackColor = true;
             this.chkLaunchGameOnStart.CheckedChanged += new System.EventHandler(this.chkLaunchGameOnStart_CheckedChanged);
             // 
@@ -124,9 +124,9 @@
             this.chkUseOpenGL.AutoSize = true;
             this.chkUseOpenGL.Location = new System.Drawing.Point(180, 376);
             this.chkUseOpenGL.Name = "chkUseOpenGL";
-            this.chkUseOpenGL.Size = new System.Drawing.Size(142, 17);
+            this.chkUseOpenGL.Size = new System.Drawing.Size(88, 17);
             this.chkUseOpenGL.TabIndex = 10;
-            this.chkUseOpenGL.Text = "Использовать OpenGL";
+            this.chkUseOpenGL.Text = "Use OpenGL";
             this.chkUseOpenGL.UseVisualStyleBackColor = true;
             this.chkUseOpenGL.CheckedChanged += new System.EventHandler(this.chkUseOpenGL_CheckedChanged);
             // 
@@ -135,9 +135,9 @@
             this.chkUseWindowMode.AutoSize = true;
             this.chkUseWindowMode.Location = new System.Drawing.Point(180, 354);
             this.chkUseWindowMode.Name = "chkUseWindowMode";
-            this.chkUseWindowMode.Size = new System.Drawing.Size(140, 17);
+            this.chkUseWindowMode.Size = new System.Drawing.Size(154, 17);
             this.chkUseWindowMode.TabIndex = 11;
-            this.chkUseWindowMode.Text = "Запускать игру в окне";
+            this.chkUseWindowMode.Text = "Run game in window mode";
             this.chkUseWindowMode.UseVisualStyleBackColor = true;
             this.chkUseWindowMode.CheckedChanged += new System.EventHandler(this.chkUseWindowMode_CheckedChanged);
             // 
@@ -154,7 +154,7 @@
             this.linkAdv.Size = new System.Drawing.Size(457, 31);
             this.linkAdv.TabIndex = 7;
             this.linkAdv.TabStop = true;
-            this.linkAdv.Text = "Рекламная ссылка";
+            this.linkAdv.Text = "Advertising link";
             this.linkAdv.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkAdv.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkAdv_LinkClicked);
             // 
@@ -176,8 +176,8 @@
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "WarCraft III Launcher";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.Resize += new System.EventHandler(this.frmMain_Resize);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
